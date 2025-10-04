@@ -262,7 +262,17 @@ public class Launcher {
     public void updateItem(@NonNull final LauncherItem existingItem, @NonNull final LauncherItem updatedItem) {
         final String categoryName = getItemCategory(existingItem);
         final Category category = adapter.categories.get(categoryName);
-        category.updateItem(existingItem.getId(), updatedItem.getDisplayItem(pager.getContext()));
+        boolean success = false;
+        if (category != null) {
+            success = category.updateItem(existingItem.getId(), updatedItem.getDisplayItem(pager.getContext()));
+        }
+        if (!success) {
+            for (Category categoryIter : adapter.categories.values()) {
+                if (categoryIter.updateItem(existingItem.getId(), updatedItem.getDisplayItem(pager.getContext()))) {
+                    break;
+                }
+            }
+        }
     }
 
     public synchronized void removeItems(@NonNull final Predicate<LauncherItem> condition) {

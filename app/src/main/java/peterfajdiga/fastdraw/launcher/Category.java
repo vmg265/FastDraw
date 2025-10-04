@@ -55,12 +55,14 @@ public class Category {
         }
     }
 
-    public void updateItem(final String id, final DisplayItem updatedItem) {
+    public boolean updateItem(final String id, final DisplayItem updatedItem) {
         final SortedList<DisplayItem> items = adapter.getItems();
         final int index = findItemIndex(items, id);
         if (index != -1) {
             items.updateItemAt(index, updatedItem);
+            return true;
         }
+        return false;
     }
 
     private static int findItemIndex(final SortedList<DisplayItem> items, final String id) {
