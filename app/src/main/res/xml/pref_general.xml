@@ -24,4 +24,9 @@
         android:title="@string/pref_title_scrollableTabs"
         android:summary="@string/pref_description_scrollableTabs" />
 
+    <Preference
+        android:key="clearDontShowAgain"
+        android:title="@string/pref_title_clearDontShowAgain"
+        android:summary="@string/pref_description_clearDontShowAgain" />
+
 </PreferenceScreen>

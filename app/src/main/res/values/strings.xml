@@ -16,6 +16,7 @@
     <string name="action_hidden_hide">Hide hidden apps</string>
     <string name="action_settings">Open preferences</string>
     <string name="action_notifications">Open notifications drawer</string>
+    <string name="action_dont_show_again">Don\'t show again</string>
 
     <string name="widget_replace">Replace</string>
     <string name="widget_setup">Setup</string>
@@ -39,6 +40,8 @@
     <string name="pref_description_headerbtm">Place category tabs on the bottom of the screen instead of on the top</string>
     <string name="pref_title_scrollableTabs">Scrollable tabs</string>
     <string name="pref_description_scrollableTabs">If you have a lot of categories (experimental)</string>
+    <string name="pref_title_clearDontShowAgain">Restore dismissed messages</string>
+    <string name="pref_description_clearDontShowAgain">Restore pop-up messages that were set to not show again.</string>
 
     <string name="pref_header_appearance">Appearance</string>
     <string name="pref_title_wallpaperParallax">Wallpaper parallax</string>

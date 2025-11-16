@@ -34,6 +34,7 @@ import peterfajdiga.fastdraw.R;
 import peterfajdiga.fastdraw.categoryorder.CategoryOrderAdapter;
 import peterfajdiga.fastdraw.categoryorder.ReorderHelperCallback;
 import peterfajdiga.fastdraw.prefs.PrefMap;
+import peterfajdiga.fastdraw.prefs.DismissableSnackbars;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On
@@ -172,6 +173,11 @@ public class SettingsActivity extends AppCompatPreferenceActivity implements Sha
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.pref_general);
             setHasOptionsMenu(false);
+
+            findPreference("clearDontShowAgain").setOnPreferenceClickListener(preference -> {
+                DismissableSnackbars.clearDismissals(getContext());
+                return true;
+            });
         }
     }
 
