@@ -43,13 +43,14 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.color.MaterialColors;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 import java.lang.ref.WeakReference;
@@ -86,6 +87,7 @@ import peterfajdiga.fastdraw.launcher.launcheritem.ShortcutItem;
 import peterfajdiga.fastdraw.prefs.PrefMap;
 import peterfajdiga.fastdraw.prefs.Preferences;
 import peterfajdiga.fastdraw.receivers.InstallAppReceiver;
+import peterfajdiga.fastdraw.prefs.DismissableSnackbars;
 import peterfajdiga.fastdraw.views.CategoryTabLayout;
 import peterfajdiga.fastdraw.views.Drawables;
 import peterfajdiga.fastdraw.views.NestedScrollParent;
@@ -97,7 +99,7 @@ import peterfajdiga.fastdraw.views.gestures.Swipe;
 import peterfajdiga.fastdraw.widgets.WidgetHolder;
 import peterfajdiga.fastdraw.widgets.WidgetManager;
 
-public class MainActivity extends FragmentActivity implements CategorySelectionDialog.OnCategorySelectedListener {
+public class MainActivity extends AppCompatActivity implements CategorySelectionDialog.OnCategorySelectedListener {
     public static final int INSTALL_SHORTCUT_REQUEST = 2143;
     public static final int PICK_WIDGET_REQUEST = 2144;
     public static final int CREATE_WIDGET_REQUEST = 2145;
@@ -836,7 +838,11 @@ public class MainActivity extends FragmentActivity implements CategorySelectionD
         @NonNull final OreoShortcuts.HostPermissionException e
     ) {
         Log.e("OreoShortcuts", "Can't access shortcuts (SecurityException)", e);
-        Toast.makeText(this, R.string.error_oreo_shortcuts_security, Toast.LENGTH_LONG).show();
+        DismissableSnackbars.show(
+            this,
+            Snackbar.make(findViewById(android.R.id.content), R.string.error_oreo_shortcuts_security, Snackbar.LENGTH_LONG),
+            "error_oreo_shortcuts_security"
+        );
     }
 
     /**
