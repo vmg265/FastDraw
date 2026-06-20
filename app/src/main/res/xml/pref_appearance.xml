@@ -27,4 +27,22 @@
         android:key="bgGradientOpacity"
         android:title="@string/pref_title_bgGradientOpacity" />
 
+    <ListPreference
+        android:key="globalIconPack"
+        android:title="@string/pref_title_globalIconPack"
+        android:defaultValue="" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="hideAppTitles"
+        android:title="@string/pref_title_hideAppTitles"
+        android:summary="@string/pref_description_hideAppTitles" />
+
+    <ListPreference
+        android:key="iconSizeMultiplier"
+        android:title="@string/pref_title_iconSizeMultiplier"
+        android:entries="@array/icon_size_entries"
+        android:entryValues="@array/icon_size_values"
+        android:defaultValue="1.0" />
+
 </PreferenceScreen>

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <peterfajdiga.fastdraw.views.NestedScrollParent
+    <com.vmg265.fastdrawplus.fork.views.NestedScrollParent
         android:id="@+id/scroll_parent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,7 +15,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <peterfajdiga.fastdraw.widgets.WidgetHolder
+            <com.vmg265.fastdrawplus.fork.widgets.WidgetHolder
                 android:id="@+id/widget_holder"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
 
         </LinearLayout>
 
-    </peterfajdiga.fastdraw.views.NestedScrollParent>
+    </com.vmg265.fastdrawplus.fork.views.NestedScrollParent>
 
     <LinearLayout
         android:id="@+id/header"
@@ -55,7 +55,7 @@
 
         <include layout="@layout/drop_zones" />
 
-        <peterfajdiga.fastdraw.views.CategoryTabLayout
+        <com.vmg265.fastdrawplus.fork.views.CategoryTabLayout
             android:id="@+id/tab_container"
             android:layout_width="match_parent"
             android:layout_height="@dimen/pager_header_height"

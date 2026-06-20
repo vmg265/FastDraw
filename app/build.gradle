@@ -4,7 +4,7 @@ android {
     compileSdk 36
 
     defaultConfig {
-        applicationId "peterfajdiga.fastdraw"
+        applicationId "com.vmg265.fastdrawplus.fork"
         minSdk 28
         targetSdk 35
         versionCode 19
@@ -16,7 +16,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    namespace 'peterfajdiga.fastdraw'
+    namespace 'com.vmg265.fastdrawplus.fork'
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_9
         targetCompatibility JavaVersion.VERSION_1_9

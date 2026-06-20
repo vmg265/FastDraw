@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="icon_size_entries">
+        <item>@string/icon_size_small</item>
+        <item>@string/icon_size_medium</item>
+        <item>@string/icon_size_large</item>
+        <item>@string/icon_size_huge</item>
+    </string-array>
+    
+    <string-array name="icon_size_values">
+        <item>0.8</item>
+        <item>1.0</item>
+        <item>1.2</item>
+        <item>1.5</item>
+    </string-array>
+</resources>

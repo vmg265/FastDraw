@@ -27,4 +27,9 @@
         android:text="@string/remove_shortcut"
         style="@style/DropZone"/>
 
+    <TextView
+        android:id="@+id/drop_zone_edit_icon"
+        android:text="@string/action_edit_icon"
+        style="@style/DropZone"/>
+
 </LinearLayout>

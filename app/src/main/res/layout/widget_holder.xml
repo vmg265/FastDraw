@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <peterfajdiga.fastdraw.views.GestureInterceptor
+    <com.vmg265.fastdrawplus.fork.views.GestureInterceptor
         android:id="@+id/widget_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

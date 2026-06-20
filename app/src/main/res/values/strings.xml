@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Fast Draw</string>
+    <string name="app_name">Fastdraw Plus</string>
     <string name="new_category">New category</string>
     <string name="hide">Hide</string>
     <string name="change_category_icon">Change category icon</string>
@@ -51,6 +51,20 @@
     <string name="pref_title_bgGradientColorFromWallpaper">Background shadow color from wallpaper</string>
     <string name="pref_description_bgGradientColorFromWallpaper">Color the background shadow based on the color of your wallpaper (requires Android Oreo or newer)</string>
     <string name="pref_title_bgGradientOpacity">Background shadow opacity</string>
+
+    <string name="pref_title_globalIconPack">Icon pack</string>
+    <string name="pref_title_hideAppTitles">Hide app titles</string>
+    <string name="pref_description_hideAppTitles">Hide app names in the launcher</string>
+    <string name="pref_title_iconSizeMultiplier">Icon size</string>
+
+    <string name="icon_size_small">Small</string>
+    <string name="icon_size_medium">Medium</string>
+    <string name="icon_size_large">Large</string>
+    <string name="icon_size_huge">Huge</string>
+    <string name="system_default">System default</string>
+
+    <string name="action_edit_icon">Edit icon</string>
+    <string name="select_icon">Select icon</string>
 
     <string name="pref_header_categoryorder">Order of categories</string>
     <string name="pref_title_orderreset">Order alphabetically</string>
